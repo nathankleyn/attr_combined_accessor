@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Extend module with the additional accessor utility.
 class Module
   # Creates a combined accessor that allows getting and setting from the
