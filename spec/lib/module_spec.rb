@@ -16,13 +16,19 @@ RSpec.describe(Module) do
       test_class.instance_variable_set(:@bar, 'bar')
     end
 
-    it('adds a combined reader/writer method for each name specified') do
+    it('adds a combined reader/writer method for foo') do
       expect(test_class.respond_to?(:foo)).to be(true)
+    end
+
+    it('adds a combined reader/writer method for bar') do
       expect(test_class.respond_to?(:bar)).to be(true)
     end
 
-    it('adds a writer method for each name specified') do
+    it('adds a writer method for foo') do
       expect(test_class.respond_to?(:foo=)).to be(true)
+    end
+
+    it('adds a writer method for bar') do
       expect(test_class.respond_to?(:bar=)).to be(true)
     end
 

@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
-require 'coveralls'
-Coveralls.wear!
+if ENV['CI']
+  require 'simplecov'
+  SimpleCov.start
+end
 
 RSpec.configure do |config|
   config.mock_with(:rspec) do |mocks|
